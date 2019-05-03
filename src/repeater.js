@@ -142,7 +142,7 @@ $.fn.repeater = function (fig) {
             }
         };
 
-        var setIndexes = function ($items, groupName, repeaters) {
+        var setIndexes = fig.setIndexes || function ($items, groupName, repeaters) {
             $items.each(function (index) {
                 var $item = $(this);
                 $item.data('item-name', groupName + '[' + index + ']');
